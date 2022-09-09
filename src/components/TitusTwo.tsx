@@ -22,7 +22,7 @@ export default function TitusTwo() {
               <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                 <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
                   <span className="block text-indigo-100">
-                    Titus 2 - Women's Ministry
+                    Titus 2 - Womens Ministry
                   </span>
                 </h1>
 
@@ -54,7 +54,7 @@ export default function TitusTwo() {
                 women of faith to live out their Christian faith in ways that
                 honors and glorifies God. We believe that the Holy Scriptures
                 exalts the Holy Gospel of our Lord and Savior Jesus Christ. The
-                Scriptures are where all the answers pertaining to life's
+                Scriptures are where all the answers pertaining to lifes
                 struggles and problems, and provides the way for change,
                 healing, and reconciliation in our relationship through Christ,
                 with God.
@@ -68,7 +68,7 @@ export default function TitusTwo() {
 
               <h1 className="mt-10">
                 <span className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                  Purpose and Goal of Titus 2 Women's Ministry:
+                  Purpose and Goal of Titus 2 Womens Ministry:
                 </span>
               </h1>
 
@@ -81,7 +81,7 @@ export default function TitusTwo() {
                 These three topics have been the bedrock for heated discussions
                 among the various churches. The PBCM desires, through teaching
                 and equipping, to live out and walk alongside women (e.g.
-                discipleship), encouraging women to fulfill God’s purposes for
+                discipleship), encouraging women to fulfill Gods purposes for
                 her life and for His glory.
               </p>
               <p className="mt-8 text-xl text-gray-900 leading-8 font-bold">
@@ -89,8 +89,8 @@ export default function TitusTwo() {
               </p>
               <p className="mt-8 text-xl text-gray-500 leading-8">
                 The PBCM desires to support, teach, and equip women in
-                leadership within the local church (e.g., pastors’ and elders’
-                wives). It is the PBCM’s belief that when older women (e.g.,
+                leadership within the local church (e.g., pastors and elders
+                wives). It is the PBCMs belief that when older women (e.g.,
                 women in leadership roles) biblically understand and accept her
                 identity, role(s), and callings, she then, in turn, will be able
                 to teach the younger women in her congregation the qualities and
@@ -113,7 +113,7 @@ export default function TitusTwo() {
               <ol className="list-disc mt-8 text-xl text-gray-500 leading-8 max-w-2xl mx-auto">
                 <li>
                   Having a continually strong and intimate relationship with
-                  Christ as a result of having knowledge of God’s Word and a
+                  Christ as a result of having knowledge of Gods Word and a
                   consistent prayer life.
                 </li>
                 <li>

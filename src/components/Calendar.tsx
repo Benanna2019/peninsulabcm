@@ -41,12 +41,12 @@ function classNames(...classes: any) {
 
 export default function Calendar({ calendarEvents }: any) {
   const { data, isLoading, isError } = calendarEvents;
-  let today = startOfToday();
-  let [selectedDay, setSelectedDay] = useState(today);
-  let [currentMonth, setCurrentMonth] = useState(format(today, "MMM-yyyy"));
-  let firstDayCurrentMonth = parse(currentMonth, "MMM-yyyy", new Date());
+  const today = startOfToday();
+  const [selectedDay, setSelectedDay] = useState(today);
+  const [currentMonth, setCurrentMonth] = useState(format(today, "MMM-yyyy"));
+  const firstDayCurrentMonth = parse(currentMonth, "MMM-yyyy", new Date());
 
-  let days = eachDayOfInterval({
+  const days = eachDayOfInterval({
     start: firstDayCurrentMonth,
     end: endOfMonth(firstDayCurrentMonth),
   });
@@ -93,7 +93,7 @@ export default function Calendar({ calendarEvents }: any) {
 
   const { allCalendarEvents } = data;
 
-  let selectedDayMeetings = allCalendarEvents.filter((event: any) => {
+  const selectedDayMeetings = allCalendarEvents.filter((event: any) => {
     return isSameDay(parseJSON(event.startDate), selectedDay);
   });
 
@@ -208,8 +208,8 @@ export default function Calendar({ calendarEvents }: any) {
 
 function Meeting({ event }: any) {
   //I will need to go back and add types and use zod schema validation
-  let startDateTime = parseJSON(event?.startDate);
-  let endDateTime = parseJSON(event?.endDate);
+  const startDateTime = parseJSON(event?.startDate);
+  const endDateTime = parseJSON(event?.endDate);
 
   return (
     <li className="flex items-center px-4 py-2 space-x-4 group rounded-xl focus-within:bg-gray-100 hover:bg-gray-100">
@@ -284,7 +284,7 @@ function Meeting({ event }: any) {
   );
 }
 
-let colStartClasses = [
+const colStartClasses = [
   "",
   "col-start-2",
   "col-start-3",

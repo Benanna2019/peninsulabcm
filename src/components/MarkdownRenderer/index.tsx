@@ -1,3 +1,4 @@
+//@ts-nocheck
 import deepmerge from "deepmerge";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -5,7 +6,6 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
-//@ts-ignore
 import linkifyRegex from "remark-linkify-regex";
 
 import { CodeBlock } from "./CodeBlock";
@@ -33,10 +33,10 @@ function LinkRenderer({ href, ...rest }: any) {
         </Link>
       );
     }
-    return <a target="_blank" rel="noopener" href={href} {...rest} />;
+    return <a target="_blank" rel="noreferrer" href={href} {...rest} />;
   } catch (e) {
     console.error(e);
-    return <a target="_blank" rel="noopener" href={href} {...rest} />;
+    return <a target="_blank" rel="noreferrer" href={href} {...rest} />;
   }
 }
 
@@ -111,7 +111,6 @@ export function MarkdownRenderer(props: any) {
   const { children, variant = "longform", ...rest } = props;
 
   const schema = deepmerge(defaultSchema, {
-    //@ts-ignore
     tagNames: [...defaultSchema.tagNames, "sup", "sub", "section"],
     attributes: {
       "*": ["className"],

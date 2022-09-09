@@ -66,8 +66,8 @@ export default function CovidResponse() {
                 determined to keep our eyes and heart on the Lord. Deuteronomy
                 31:6 instructs believers on what to be and what we are not to
                 be! God has promised His children that HE is and will FOREVER be
-                our” true” source of protection, strength, and peace during
-                unknown times.
+                our &quot;true&quot; source of protection, strength, and peace
+                during unknown times.
               </p>
 
               <h1 className="mt-10">
@@ -84,12 +84,12 @@ export default function CovidResponse() {
                 are living in.
               </p>
               <p className="mt-8 text-xl text-gray-500 leading-8">
-                Continuing to be in well informed and not “negatively
-                influenced” by irrational thinking which fuels even more the
-                potential of living in isolation, constant fear, worry, and
+                Continuing to be in well informed and not &quot;negatively
+                influenced&quot; by irrational thinking which fuels even more
+                the potential of living in isolation, constant fear, worry, and
                 anxiety is now more crucial than ever. Let us help those around
-                us by obtaining “truthful” and accurate information and reports
-                from verified medical organizations.
+                us by obtaining &quot;truthful&quot; and accurate information
+                and reports from verified medical organizations.
               </p>
               <p className="mt-8 text-xl text-gray-500 leading-8">
                 Social media (e.g., Facebook, YouTube, Instagram, word of mouth,
@@ -106,22 +106,24 @@ export default function CovidResponse() {
                 <strong>
                   <em>Philippians 4:8…</em>
                 </strong>{" "}
-                “Finally, brothers, whatever is true, whatever is honorable,
-                whatever is just, whatever is pure, whatever is lovely, whatever
-                is commendable, if there is any excellence, if there is anything
-                worthy of praise, think about these things”.
+                &quot;Finally, brothers, whatever is true, whatever is
+                honorable, whatever is just, whatever is pure, whatever is
+                lovely, whatever is commendable, if there is any excellence, if
+                there is anything worthy of praise, think about these
+                things&quot;.
               </p>
               <p className="mt-8 text-xl text-gray-500 leading-8 text-center">
                 <strong>
                   <em>Proverbs 11:14…</em>
                 </strong>{" "}
-                “Where there is no guidance, a people falls, but in an abundance
-                of counselors there is safetyLet this time and season of
-                uncertainty and vagueness, become more of a season and time of
-                earnest and sincere prayer, and love for our neighbor”. Let us
-                not to react, but respond within the context of the truth of
-                Scripture. <span className="underline">Do not be afraid!</span>{" "}
-                Fear is torment…
+                &quot;Where there is no guidance, a people falls, but in an
+                abundance of counselors there is safetyLet this time and season
+                of uncertainty and vagueness, become more of a season and time
+                of earnest and sincere prayer, and love for our neighbor&quot;.
+                Let us not to react, but respond within the context of the truth
+                of Scripture.{" "}
+                <span className="underline">Do not be afraid!</span> Fear is
+                torment…
               </p>
               <p className="mt-8 text-xl text-gray-500 leading-8">
                 Furthermore, Christians must be the Church, representative of
@@ -130,10 +132,10 @@ export default function CovidResponse() {
               </p>
 
               <p className="mt-8 text-xl text-gray-500 leading-8">
-                Fulfilling Jesus' “Great Commandment” means loving our neighbors
-                as we love ourselves. Moreover, Christians must share the Gospel
-                of Jesus Christ, particularly in these times when people are
-                living in despair and without hope.
+                Fulfilling Jesus&apos; &quot;Great Commandment&quot; means
+                loving our neighbors as we love ourselves. Moreover, Christians
+                must share the Gospel of Jesus Christ, particularly in these
+                times when people are living in despair and without hope.
               </p>
               <p className="mt-8 text-xl text-gray-500 leading-8 text-center">
                 ~ Jesus is our Hope, Dwell in HIM ~ Psalms 91:1-2

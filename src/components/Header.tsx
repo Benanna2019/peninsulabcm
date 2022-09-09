@@ -1,6 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
 import image from "/public/PBCM_Purple.png";
-import cross from "/public/Cross.png";
+// import cross from "/public/Cross.png";
 import PBCM_Logo from "/public/CrossWithSameFontPBCMLogo.png";
 import Link from "next/link";
 import Image from "next/future/image";
@@ -21,9 +21,7 @@ import {
   SupportIcon,
   XIcon,
   NewspaperIcon,
-  //@ts-ignore
 } from "@heroicons/react/outline";
-//@ts-ignore
 import { ChevronDownIcon } from "@heroicons/react/solid";
 
 const about = [
@@ -60,42 +58,42 @@ const about = [
   },
 ];
 
-const resources = [
-  {
-    name: "Biblical Counseling",
-    description:
-      "Get all of your questions answered in our forums or contact support.",
-    href: "/biblical-counseling",
-    icon: SupportIcon,
-  },
-  // {
-  //   name: "Answers",
-  //   description:
-  //     "Learn how to maximize our platform to get the most out of it.",
-  //   href: "/answers",
-  //   icon: BookmarkAltIcon,
-  // },
-  // {
-  //   name: "Event - ACBC Certified Celebration",
-  //   description:
-  //     "November 12 - 14: PBCM is ACBC Certified! Join us in celebrating!",
-  //   href: "/acbc-celebration",
-  //   icon: CalendarIcon,
-  // },
-  // {
-  //   name: "ACBC Conference and Award",
-  //   description:
-  //     "Dr. Janie D Wilson and PBCM has been awarded ACBC Certification",
-  //   href: "/acbc-conference",
-  //   icon: StarIcon,
-  // },
-  // {
-  //   name: "Speaking Schedule",
-  //   description: "Understand how we take your privacy seriously.",
-  //   href: "/schedule",
-  //   icon: SpeakerphoneIcon,
-  // },
-];
+// const resources = [
+//   {
+//     name: "Biblical Counseling",
+//     description:
+//       "Get all of your questions answered in our forums or contact support.",
+//     href: "/biblical-counseling",
+//     icon: SupportIcon,
+//   },
+//   // {
+//   //   name: "Answers",
+//   //   description:
+//   //     "Learn how to maximize our platform to get the most out of it.",
+//   //   href: "/answers",
+//   //   icon: BookmarkAltIcon,
+//   // },
+//   // {
+//   //   name: "Event - ACBC Certified Celebration",
+//   //   description:
+//   //     "November 12 - 14: PBCM is ACBC Certified! Join us in celebrating!",
+//   //   href: "/acbc-celebration",
+//   //   icon: CalendarIcon,
+//   // },
+//   // {
+//   //   name: "ACBC Conference and Award",
+//   //   description:
+//   //     "Dr. Janie D Wilson and PBCM has been awarded ACBC Certification",
+//   //   href: "/acbc-conference",
+//   //   icon: StarIcon,
+//   // },
+//   // {
+//   //   name: "Speaking Schedule",
+//   //   description: "Understand how we take your privacy seriously.",
+//   //   href: "/schedule",
+//   //   icon: SpeakerphoneIcon,
+//   // },
+// ];
 
 const equipping = [
   {
@@ -199,7 +197,10 @@ export default function Header() {
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {about.map((item) => (
-                            <Popover.Button className="inline-flex">
+                            <Popover.Button
+                              key={item.name}
+                              className="inline-flex"
+                            >
                               <Link key={item.name} href={item.href}>
                                 <a className="-m-3 p-3 flex text-left items-start rounded-lg hover:bg-gray-50">
                                   <item.icon
@@ -259,7 +260,10 @@ export default function Header() {
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {equipping.map((item) => (
-                            <Popover.Button className="inline-flex">
+                            <Popover.Button
+                              key={item.name}
+                              className="inline-flex"
+                            >
                               <Link key={item.name} href={item.href}>
                                 <a className="-m-3 p-3 flex text-left items-start rounded-lg hover:bg-gray-50">
                                   <item.icon
@@ -336,8 +340,8 @@ export default function Header() {
               <div className="mt-6">
                 <nav className="grid grid-cols-1 gap-7">
                   {about.map((item) => (
-                    <Popover.Button>
-                      <Link key={item.name + "popover"} href={item.href}>
+                    <Popover.Button key={item.name + "popover"}>
+                      <Link key={item.name + "popoverlink"} href={item.href}>
                         <a className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
                           <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-tyrianPurple-300 to-tyrianPurple-600 text-white">
                             <item.icon className="h-6 w-6" aria-hidden="true" />
@@ -376,8 +380,11 @@ export default function Header() {
                   </Link>
                 </Popover.Button>
                 {equipping.map((item) => (
-                  <Popover.Button className="inline-flex">
-                    <Link key={item.name + "popover"} href={item.href}>
+                  <Popover.Button
+                    key={item.name + "popover"}
+                    className="inline-flex"
+                  >
+                    <Link key={item.name + "popoverlink"} href={item.href}>
                       <a className="text-left font-medium text-gray-900 hover:text-gray-700">
                         {item.name}
                       </a>

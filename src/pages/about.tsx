@@ -39,24 +39,24 @@ const About: NextPage = () => {
               <p className="mb-4">
                 A biblical counselor is trained in the use of Scripture and the
                 principles of Biblical counseling. This counseling is not
-                dependent on or does it consider mans' wisdom, opinions,
+                dependent on or does it consider mans wisdom, opinions,
                 experience, or concepts of behavior (Isaiah 55:8-11), to
                 distinguish it from fallible human thoughts and plans. Biblical
                 counseling seeks to bring the full range of Biblical truth to
-                focus on the counselee's need (Hebrews 4:12-16). It stresses the
-                power of God’s word to enter the deepest recesses of a person’s
+                focus on the counselees need (Hebrews 4:12-16). It stresses the
+                power of Gods word to enter the deepest recesses of a persons
                 being.
               </p>
               <p className="mb-4">
-                PBCM stresses the importance of “real change” that happens in
-                the heart of man. When an individual has a saving relationship
-                with Jesus Christ, are indwelt with the Holy Spirit, who
-                convicts of sins, and words with the revealing truth of
-                Scripture to equip a person.
+                PBCM stresses the importance of real change that happens in the
+                heart of man. When an individual has a saving relationship with
+                Jesus Christ, are indwelt with the Holy Spirit, who convicts of
+                sins, and words with the revealing truth of Scripture to equip a
+                person.
               </p>
               <p className="mb-4">
                 The main objective in the ministry of Biblical counseling is
-                culminated in, “change of the heart”. God's word (Holy
+                culminated in, &quot;change of the heart&quot;. God's word (Holy
                 Scripture) contains all we need for life and godliness (2 Peter
                 1:3-4). The word of God must be applied to the heart of man,
                 resulting in being transformed that happens by the renewing of

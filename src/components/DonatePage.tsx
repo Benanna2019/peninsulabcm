@@ -7,8 +7,8 @@ export default function DonatePage() {
             Donate
           </h2>
           <p className="mt-8 max-w-4xl mx-auto text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-3xl">
-            ..."Because of your partnership in the Gospel from the first day
-            until now" ~Philippians 1:5
+            ...&quot;Because of your partnership in the Gospel from the first
+            day until now&quot; ~Philippians 1:5
           </p>
           <p className="max-w-3xl mt-6 mx-auto text-xl text-gray-500">
             Thank you for supporting the Peninsula Biblical Counseling
@@ -51,11 +51,11 @@ export default function DonatePage() {
             </li>
           </ul>
           <p className="max-w-3xl mt-16 mx-auto text-xl text-gray-700 italic">
-            There are two primary ways you can support PBCM's ministry—through
-            prayer and financial giving. Each month we will update this page to
-            inform you of the current happenings and specific prayer needs. If
-            you have any additional questions, please feel free to contact us
-            and we will be happy to assist.
+            There are two primary ways you can support PBCM&apos;s
+            ministry—through prayer and financial giving. Each month we will
+            update this page to inform you of the current happenings and
+            specific prayer needs. If you have any additional questions, please
+            feel free to contact us and we will be happy to assist.
           </p>
         </div>
       </div>

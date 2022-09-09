@@ -90,19 +90,20 @@ export default function Vision() {
                 Matthew 28:19-20 (the Great Commission).
               </p>
               <p className="mt-8 text-xl text-gray-500 leading-8">
-                These two “Great Covenants” have their foundation in intimate
-                relationship with the Lord Jesus Christ. When we are in an
-                intimate relationship with Him, we are overwhelmed in His love
-                for us and have a deep desire to share God’s love with others as
-                well.
+                These two &quot;Great Covenants&quot; have their foundation in
+                intimate relationship with the Lord Jesus Christ. When we are in
+                an intimate relationship with Him, we are overwhelmed in His
+                love for us and have a deep desire to share God&apos;s love with
+                others as well.
               </p>
               <p className="mt-8 text-xl text-gray-500 leading-8">
                 Being obedient to the Great Commandment and the Great Commission
-                is also parallel to living out the Scriptures, “‘Love the Lord
-                your God with all your heart and with all your soul and with all
-                your mind” (Matthew 22:37). This love is expressed as we obey
-                the Great Commission and the Great Commandment, sharing God’s
-                love in word and deed, summed up in Galatians 5:14.
+                is also parallel to living out the Scriptures, &quot;Love the
+                Lord your God with all your heart and with all your soul and
+                with all your mind&quot; (Matthew 22:37). This love is expressed
+                as we obey the Great Commission and the Great Commandment,
+                sharing God&apos;s love in word and deed, summed up in Galatians
+                5:14.
               </p>
             </div>
           </div>

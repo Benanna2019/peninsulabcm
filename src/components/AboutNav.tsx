@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { Fragment, useState } from "react";
 import { Dialog, Menu, Transition } from "@headlessui/react";
 import {
@@ -6,7 +7,6 @@ import {
   GlobeIcon,
   XIcon,
   BookOpenIcon,
-  //@ts-ignore
 } from "@heroicons/react/outline";
 
 const navigation = [
@@ -103,7 +103,6 @@ export default function AboutNav({ children }: any) {
                       key={item.name}
                       href={item.href}
                       onClick={() => setCurrentItem}
-                      //@ts-ignore
                       className={({ currentItem }: any) =>
                         classNames(
                           currentItem

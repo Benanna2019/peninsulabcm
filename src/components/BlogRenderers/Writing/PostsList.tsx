@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import { ListContainer } from "../../ListDetail/ListContainer";
 import { LoadingSpinner } from "../../LoadingSpinner";
 import { PostListItem } from "./PostListItem";
-import { WritingTitlebar } from "./WritingTitlebar";
 
 export const WritingContext = React.createContext({
   filter: "published",
@@ -29,7 +28,6 @@ export function PostsList({ posts }: any) {
   if (isLoading && !data?.allPosts) {
     return (
       <ListContainer onRef={setScrollContainerRef}>
-        <WritingTitlebar scrollContainerRef={scrollContainerRef} />
         <div className="flex flex-1 items-center justify-center">
           <LoadingSpinner />
         </div>
@@ -41,8 +39,6 @@ export function PostsList({ posts }: any) {
 
   return (
     <ListContainer data-cy="posts-list" onRef={setScrollContainerRef}>
-      <WritingTitlebar scrollContainerRef={scrollContainerRef} />
-
       <div className="lg:space-y-1 lg:p-3">
         {allPosts?.map((post: any) => {
           const active = slug === post.slug; // use url query params or params?.slug

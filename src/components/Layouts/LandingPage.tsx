@@ -3,7 +3,7 @@ import chsfountain from "/public/Pineapple_Fountain.jpeg";
 import BibleStudy from "/public/Bible_study.jpeg";
 import CovidPic from "/public/covid-pic.jpeg";
 import Award from "/public/ACBC_Certificate.jpg";
-import Banner from "../Banner";
+// import Banner from "../Banner";
 import Image from "next/future/image";
 
 // const metrics = [
@@ -89,9 +89,9 @@ export default function LandingPage() {
                   </span>
                 </h1>
                 <p className="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-100 sm:max-w-3xl">
-                  "…impacting the Peninsula of Charleston, South Carolina
+                  &quot;…impacting the Peninsula of Charleston, South Carolina
                   through the Great Commandment (Matthew 22:34-40) and Great
-                  Commission (Matthew 28:16-20)"
+                  Commission (Matthew 28:16-20)&quot;
                 </p>
                 <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
                   <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5"></div>
@@ -125,14 +125,14 @@ export default function LandingPage() {
                       their community and on their job.
                     </p>
                     <p className="mt-4 text-m text-gray-500">
-                      We accomplish this through “the scripture only”. PBCM
-                      working in concert with and within the local church uses
-                      the scripture in building our understanding of humanity,
-                      and how we minister to a “broken humanity”. PBCM augments
-                      the local church in promoting love (Matthew 22:37-40) and
-                      discipleship (Matthew 18-20) providing counseling,
-                      seminars, and training through the lens of a Biblical
-                      Worldview.
+                      We accomplish this through &quot;the scripture only&quot;.
+                      PBCM working in concert with and within the local church
+                      uses the scripture in building our understanding of
+                      humanity, and how we minister to a &quot;broken
+                      humanity&quot;. PBCM augments the local church in
+                      promoting love (Matthew 22:37-40) and discipleship
+                      (Matthew 18-20) providing counseling, seminars, and
+                      training through the lens of a Biblical Worldview.
                     </p>
                   </div>
                 </div>
@@ -140,7 +140,8 @@ export default function LandingPage() {
                   <blockquote>
                     <div>
                       <p className="text-base text-gray-500">
-                        "Jesus is our Hope, Dwell in HIM ~ Psalms 91:1-2"
+                        &quot;Jesus is our Hope, Dwell in HIM ~ Psalms
+                        91:1-2&quot;
                       </p>
                     </div>
                     <footer className="mt-3">
@@ -172,7 +173,7 @@ export default function LandingPage() {
               <Image
                 className="w-full h-full object-cover"
                 src={Award}
-                alt=""
+                alt="ACBC Award"
               />
               <div
                 aria-hidden="true"
@@ -185,7 +186,7 @@ export default function LandingPage() {
                   PBCM is ACBC Certified!
                 </h2>
                 <p className="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">
-                  We’re here to help
+                  We&apos;re here to help
                 </p>
                 <p className="mt-3 text-lg text-gray-300">
                   Biblical counseling is <em>counseling</em> (Colossians 3:16).
@@ -280,8 +281,8 @@ export default function LandingPage() {
                       determined to keep our eyes and heart on the Lord.
                       Deuteronomy 31:6 instructs believers on what to be and
                       what we are not to be! God has promised His children that
-                      HE is and will FOREVER be our” true” source of protection,
-                      strength, and peace during unknown times.
+                      HE is and will FOREVER be our &quot;true&quot; source of
+                      protection, strength, and peace during unknown times.
                     </p>
                     <div className="mt-6">
                       <Link

@@ -68,7 +68,7 @@ function Null() {
         </p>
         <p className="text-tertiary">
           Maybe this link is broken. Maybe something was deleted, or moved. In
-          any case, there’s nothing to see here...
+          any case, there&apos;s nothing to see here...
         </p>
       </div>
       <Button href="/">Go home</Button>

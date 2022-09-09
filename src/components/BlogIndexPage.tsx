@@ -8,7 +8,6 @@ import { LoadingSpinner } from "./LoadingSpinner";
 
 export default function BlogIndexPage({ posts }: any) {
   const { data, isLoading } = posts;
-  console.log("all posts data", data?.allPosts);
 
   if (isLoading) {
     return (

@@ -1,4 +1,4 @@
-import Hope from "/public/journey-of-hope.jpg";
+// import Hope from "/public/journey-of-hope.jpg";
 import Ocean from "/public/joseph-barrientos-holy-spirit.jpeg";
 import Image from "next/future/image";
 
@@ -65,21 +65,22 @@ export default function CancerCareContent() {
                 and Christian leaders to come together to learn about the need,
                 the vision and the process to provide hope and encouragement to
                 people living with cancer. It is a two-day immersion experience
-                that investigates “who and what” the heart of cancer care
-                ministry is.
+                that investigates &quot;who and what&quot; the heart of cancer
+                care ministry is.
               </p>
               <p className="mt-8 text-xl text-gray-500 leading-8">
                 Cancer care ministry is a ministry of{" "}
                 <span className="font-bold">hope</span> (Job 11:18-19). This
                 ministry is bathed in prayer, involves counsel, visits and
                 assistance to the patient and the caregiver. It is centered in
-                “Christ” bringing God's hope to Cancer patients and their
-                caregivers, family and friends. This type of ministry requires a
-                sympathetic, empathetic individual, with an understanding of the
-                impact of cancer on this society, how people react to it and how
-                God has called His people to respond to this dreaded “enemy”.
-                Above all, it requires us to have within ourselves a sincere and
-                unfeigned hope that we can take to those in need.
+                &quot;Christ&quot; bringing God&apos;s hope to Cancer patients
+                and their caregivers, family and friends. This type of ministry
+                requires a sympathetic, empathetic individual, with an
+                understanding of the impact of cancer on this society, how
+                people react to it and how God has called His people to respond
+                to this dreaded &quot;enemy&quot;. Above all, it requires us to
+                have within ourselves a sincere and unfeigned hope that we can
+                take to those in need.
               </p>
               <p className="mt-8 text-xl text-gray-500 leading-8">
                 A ministry training program, such as the Journey of Hope

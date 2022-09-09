@@ -1,5 +1,5 @@
+//@ts-nocheck
 import React from "react";
-//@ts-ignore
 import SyntaxHighlighter from "react-syntax-highlighter";
 export function CodeBlock({
   text,

@@ -40,7 +40,7 @@ const Equipping: NextPage = () => {
               </li>
             </ul>
             <p className="max-w-3xl mt-6 mx-auto text-xl text-gray-900 font-bold text-center">
-              2021 CLASS SCHEDULE:"TO BE UPDATED SOON"
+              2022 CLASS SCHEDULE:&quot;TO BE UPDATED SOON&quot;
             </p>
 
             <h2 className="text-4xl mt-12 text-center font-bold text-indigo-600 tracking-wide uppercase">

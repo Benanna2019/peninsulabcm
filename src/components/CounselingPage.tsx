@@ -37,26 +37,28 @@ export default function CounselingPage() {
                 <span className="font-bold">Pastoral Counseling</span> is
                 normally the Pastor of a congregation, that on a regular basis,
                 is involved in counseling those that attend his church. However,
-                in this instance, Pastoral Counseling is the “counseling,
-                admonishment, training” of interns or those who have future
+                in this instance, Pastoral Counseling is the &quot;counseling,
+                admonishment, training&quot; of interns or those who have future
                 desires of becoming a “pastor” or someone in a pastoral
                 position.
               </p>
 
               <p className="mt-8 text-xl text-gray-700 leading-8">
                 <span className="font-bold">
-                  The PBCM Pastoral Components are made up of “Experienced
-                  Pastors” who train pastors:
+                  The PBCM Pastoral Components are made up of &quot;Experienced
+                  Pastors&quot; who train pastors:
                 </span>{" "}
-                When it comes to training, “reproducing after our own kind”.
-                Only experienced, godly, “orthodox” pastors can wholly train
-                other would-be pastors. One who has never pastored a church,
-                “people or the invisible church” is limited in equipping men for
-                vital pastoral “Ephesians 4:12-16” functions which they have
-                never performed. At the Peninsula Biblical Counseling Ministries
+                When it comes to training, &quot;reproducing after our own
+                kind&quot;. Only experienced, godly, &quot;orthodox&quot;
+                pastors can wholly train other would-be pastors. One who has
+                never pastored a church, &quot;people or the invisible
+                church&quot; is limited in equipping men for vital pastoral
+                &quot;Ephesians 4:12-16&quot; functions which they have never
+                performed. At the Peninsula Biblical Counseling Ministries
                 (PBCM), pastor-professors give men the pastoral knowledge and
                 equipping they need to become successful pastor and teachers of
-                men and the biblical foundation to enter any “Seminary”.
+                men and the biblical foundation to enter any
+                &quot;Seminary&quot;.
               </p>
               <p className="mt-8 text-xl text-gray-700 leading-8">
                 In an era where many pastors have given up the biblical
@@ -87,9 +89,9 @@ export default function CounselingPage() {
               </h1>
               <p className="mt-12 text-xl text-gray-700 leading-8 font-semibold text-center">
                 The PBCM provides faith-based Biblical Counseling to those
-                seeking God's answers to the questions and problems in their
-                lives. If you are ready to receive Biblical Counseling, click
-                below to schedule your session.
+                seeking God&apos;s answers to the questions and problems in
+                their lives. If you are ready to receive Biblical Counseling,
+                click below to schedule your session.
               </p>
               <p className="mt-6 text-l font-semibold text-blue-400 leading-8">
                 <a

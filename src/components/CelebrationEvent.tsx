@@ -174,7 +174,7 @@ export default function CelebrationEvent() {
                 <div className="mt-4 space-y-6">
                   <p className="text-base text-gray-500">
                     As a guest of this event, you will receive a copy of The
-                    Pastor as Counselor: ﻿The Call for Soul Care by Dr. David
+                    Pastor as Counselor: The Call for Soul Care by Dr. David
                     Powlison and Dr. Edward Welch (forward).
                   </p>
                   <p className="text-base text-gray-500 mt-4">
@@ -184,9 +184,9 @@ export default function CelebrationEvent() {
                     leaders feel unprepared to counsel church members who are
                     struggling with difficult, multifaceted problems. David
                     Powlison reminds pastors of their unique role as the
-                    shepherds of God’s people, equipping them to apply biblical
-                    wisdom to the thoughts, values, moods, expectations, and
-                    decisions of those under their care.
+                    shepherds of God&apos;s people, equipping them to apply
+                    biblical wisdom to the thoughts, values, moods,
+                    expectations, and decisions of those under their care.
                   </p>
                 </div>
               </section>

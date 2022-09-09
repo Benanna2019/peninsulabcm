@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Link from "next/link";
 import * as React from "react";
 
@@ -16,10 +17,8 @@ type ButtonAsLink = BaseButtonProps &
 type ButtonProps = ButtonAsButton | ButtonAsLink;
 
 function BaseButton({ href = null, as = null, forwardedRef = null, ...rest }) {
-  //@ts-ignore
   if (href && href.startsWith("/")) {
     return (
-      //@ts-ignore
       <Link href={href} as={as}>
         <a {...rest} />
       </Link>
@@ -83,7 +82,6 @@ export const Button = React.forwardRef((props: ButtonProps, ref) => {
   const opacity = composer.getOpacity(props.disabled);
   const radius = composer.getRadius(props.size);
   const composed = `${baseClasses} ${size} ${opacity} ${radius} ${classes}`;
-  //@ts-ignore
   return <BaseButton forwardedRef={ref} className={composed} {...props} />;
 });
 
@@ -95,7 +93,6 @@ export const PrimaryButton = React.forwardRef((props: ButtonProps, ref) => {
   const opacity = composer.getOpacity(props.disabled);
   const radius = composer.getRadius(props.size);
   const composed = `${baseClasses} ${size} ${opacity} ${radius} ${classes}`;
-  //@ts-ignore
   return <BaseButton forwardedRef={ref} className={composed} {...props} />;
 });
 
@@ -106,7 +103,6 @@ export const DeleteButton = React.forwardRef((props: ButtonProps, ref) => {
   const opacity = composer.getOpacity(props.disabled);
   const radius = composer.getRadius(props.size);
   const composed = `${baseClasses} ${size} ${opacity} ${radius} ${classes}`;
-  //@ts-ignore
   return <BaseButton forwardedRef={ref} className={composed} {...props} />;
 });
 
@@ -116,7 +112,6 @@ export const RecordingButton = React.forwardRef((props: ButtonProps, ref) => {
   const opacity = composer.getOpacity(props.disabled);
   const radius = composer.getRadius(props.size);
   const composed = `${baseClasses} ${size} ${opacity} ${radius} ${classes}`;
-  //@ts-ignore
   return <BaseButton forwardedRef={ref} className={composed} {...props} />;
 });
 
@@ -126,7 +121,6 @@ export const GhostButton = React.forwardRef((props: ButtonProps, ref) => {
   const opacity = composer.getOpacity(props.disabled);
   const radius = composer.getRadius(props.size);
   const composed = `${baseClasses} ${size} ${opacity} ${radius} ${classes}`;
-  //@ts-ignore
   return <BaseButton forwardedRef={ref} className={composed} {...props} />;
 });
 
@@ -140,7 +134,6 @@ export const CommentButton = React.forwardRef((props: ButtonProps, ref) => {
   const opacity = composer.getOpacity(props.disabled);
   const radius = composer.getRadius(props.size);
   const composed = `${baseClasses} ${size} ${opacity} ${radius} ${classes}`;
-  //@ts-ignore
   return <BaseButton className={composed} forwardedRef={ref} {...props} />;
 });
 
@@ -150,6 +143,5 @@ export const TwitterButton = React.forwardRef((props: ButtonProps, ref) => {
   const opacity = composer.getOpacity(props.disabled);
   const radius = composer.getRadius(props.size);
   const composed = `${baseClasses} ${size} ${opacity} ${radius} ${classes}`;
-  //@ts-ignore
   return <BaseButton forwardedRef={ref} className={composed} {...props} />;
 });

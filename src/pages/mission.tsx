@@ -27,48 +27,52 @@ const Mission: NextPage = () => {
               biblically (Romans 12:2) and restoring the ministry of Biblical
               Counseling within the walls of the Local Church. And, through a
               Biblical Worldview lens concerning the issues of living in a
-              “sinful” world, equip the church through love (Matthew 22:37-40)
-              “reconcile a non-believer” (Matthew 28:18-20) through Christ to
-              God (2 Corinthians 5:11-21).
+              &quot;sinful&quot; world, equip the church through love (Matthew
+              22:37-40) &quot;reconcile a non-believer&quot; (Matthew 28:18-20)
+              through Christ to God (2 Corinthians 5:11-21).
             </p>
             <p className="mt-8 text-xl text-gray-500 leading-8">
               <strong className="text-gray-900 pr-2">About Our Beliefs:</strong>
             </p>
             <p className="mt-8 text-xl text-gray-500 leading-8">
               The Peninsula Biblical Counseling Ministries (PBCM) is a
-              “Scripture-based” ministry devoted primarily to women in
+              &quot;Scripture-based&quot; ministry devoted primarily to women in
               leadership within the church, and women in distress within the
-              community. We accomplish this “through “a consistent literal
-              structural historical biblical hermeneutic”. Working in concert
-              with and within the local church building our understanding of
-              humanity, and how we minister to “broken humanity”. PBCM augments
-              the local church in promoting love (Matthew 22:36-40) and
-              discipleship (Matthew 18-20) providing counseling, seminars, and
-              training through the lens of a Biblical Worldview.
+              community. We accomplish this through &quot;a consistent literal
+              structural historical biblical hermeneutic&quot;. Working in
+              concert with and within the local church building our
+              understanding of humanity, and how we minister to &quot;broken
+              humanity&quot;. PBCM augments the local church in promoting love
+              (Matthew 22:36-40) and discipleship (Matthew 18-20) providing
+              counseling, seminars, and training through the lens of a Biblical
+              Worldview.
             </p>
             <p className="mt-8 text-xl text-gray-500 leading-8">
               The Peninsula Biblical Counseling Ministries (PBCM) believes and
               upholds the authenticity of the Bible, and that the revelation
-              contained within the Scriptures concerning God, man, and man’s
-              problems and their solution is the only adequate foundation on
-              which to build a “true” counseling model. (Biblical Worldview)
+              contained within the Scriptures concerning God, man, and
+              man&apos;s problems and their solution is the only adequate
+              foundation on which to build a “true” counseling model. (Biblical
+              Worldview)
             </p>
             <p className="mt-8 text-xl text-gray-500 leading-8">
               The Peninsula Biblical Counseling Ministries (PBCM) teaches and
-              practices scriptural “holistic-spirit, soul and body” counseling
-              approaches and methods through the lens of a Biblical worldview.
+              practices scriptural &quot;holistic-spirit, soul and body&quot;
+              counseling approaches and methods through the lens of a Biblical
+              worldview.
             </p>
             <p className="mt-8 text-xl text-gray-500 leading-8">
-              It is through a Biblical Worldview lens, that the PBCM’s, Titus
-              2:1-5 ministry communicates and applies biblical “Truth” to human
-              growth and development, behavioral changes, marriage and family,
-              crisis intervention, substance abuse, and problem-solving in
-              counseling …all to the honor and glory of God.
+              It is through a Biblical Worldview lens, that the PBCM&apos;s,
+              Titus 2:1-5 ministry communicates and applies biblical
+              &quot;Truth&quot; to human growth and development, behavioral
+              changes, marriage and family, crisis intervention, substance
+              abuse, and problem-solving in counseling …all to the honor and
+              glory of God.
             </p>
             <p className="mt-8 text-xl text-gray-500 leading-8">
               The PBCM is committed to assisting local churches by providing
               sound, biblical, Christ-centered discipleship counseling
-              ministering God's complete truth as found in the Scriptures.
+              ministering God&apos;s complete truth as found in the Scriptures.
               Through the guidance of the Holy Spirit, we seek to bring the
               love, healing, and wholeness of Jesus Christ to those suffering
               emotional, mental, and spiritual pain. We also provide resources
@@ -129,8 +133,8 @@ const Mission: NextPage = () => {
                 Christ and that we ought to manifest that unity wherever and
                 whenever possible. Yet, we also believe in the need to discern
                 and distinguish ourselves from those who hold to doctrines and
-                philosophies that do not deepen a believer's dependence upon
-                Christ and His Word.
+                philosophies that do not deepen a believer&apos;s dependence
+                upon Christ and His Word.
               </li>
             </ol>
             <p className="mt-8 text-xl text-gray-500 leading-8">
@@ -159,7 +163,7 @@ const Mission: NextPage = () => {
             <ol className=" list-disc mt-8 text-xl text-gray-500 leading-8 max-w-2xl mx-auto">
               <li>
                 Teaching, counseling, and communicating the truth of the living
-                God’s love
+                God&apos;s love
               </li>
               <li>
                 Equipping the counselee to love God and humanity (Matthew
@@ -179,12 +183,13 @@ const Mission: NextPage = () => {
             <p className="mt-6 text-xl text-gray-500 leading-8">
               The Peninsula Biblical Counseling Ministries (PBCM), its Board of
               Directors and Certified ACBC Biblical Counselors are in
-              “scriptural” agreement with the Association of Certified Biblical
-              Counselor’s, Constitution, By-laws, Standards of Conduct, Policies
-              and Procedures, and the Doctrinal Statement of the Association of
-              Certified Biblical Counselors and hereby affirm my commitment to
-              the sufficiency of the Scriptures (Sola Scriptura) in counseling
-              as follows: https://biblicalcounseling.com/about/what-we-believe/
+              &quot;scriptural&quot; agreement with the Association of Certified
+              Biblical Counselor&apos;s, Constitution, By-laws, Standards of
+              Conduct, Policies and Procedures, and the Doctrinal Statement of
+              the Association of Certified Biblical Counselors and hereby affirm
+              my commitment to the sufficiency of the Scriptures (Sola
+              Scriptura) in counseling as follows:
+              https://biblicalcounseling.com/about/what-we-believe/
             </p>
             <p className="mt-8 text-xl font-semibold text-gray-500 leading-8">
               Areas of Biblical Counseling Certification and Continuing

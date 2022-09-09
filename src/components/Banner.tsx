@@ -1,5 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
-//@ts-ignore
+//@ts-nocheck
 import { SpeakerphoneIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 export default function Banner() {

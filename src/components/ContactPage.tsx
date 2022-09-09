@@ -10,31 +10,6 @@ export function meta() {
 }
 
 export default function ContactPage() {
-  let form = useRef();
-
-  //   const sendEmail = (e) => {
-  //     e.preventDefault();
-
-  //     emailjs
-  //       .sendForm(
-  //         "service_78xd8f5",
-  //         "template_xxra8jw",
-  //         form.current,
-  //         "user_vER9lhjGKzywNjmNobtzU"
-  //       )
-  //       .then(
-  //         (result) => {
-  //           alert("Message Sent, I'll get back to you shortly", result.text);
-  //           console.log(result.text);
-  //         },
-  //         (error) => {
-  //           alert("An error occured, Plese try again", error.text);
-  //           console.log(error.text);
-  //         }
-  //       );
-  //     e.target.reset();
-  //   };
-
   return (
     <div className="min-h-screen bg-white">
       <main className="overflow-hidden">
