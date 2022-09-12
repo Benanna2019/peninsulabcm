@@ -9,8 +9,6 @@ import FeaturedArticle from "../BlogRenderers/FeaturedArticle";
 import FeaturedEvent from "../Events/FeaturedEvent";
 
 export default function LandingPage({ featuredPost, featuredEvent }: any) {
-  console.log("featured post: ", featuredPost);
-  console.log("featured event:", featuredEvent);
   const {
     data: postData,
     isError: postError,
