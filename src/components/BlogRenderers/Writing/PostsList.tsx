@@ -4,10 +4,10 @@ import { ListContainer } from "../../ListDetail/ListContainer";
 import { LoadingSpinner } from "../../LoadingSpinner";
 import { PostListItem } from "./PostListItem";
 
-export const WritingContext = React.createContext({
-  filter: "published",
-  setFilter: (filter: string) => {},
-});
+// export const WritingContext = React.createContext({
+//   filter: "published",
+//   setFilter: (filter: string) => {},
+// });
 
 export function PostsList({ posts }: any) {
   let [scrollContainerRef, setScrollContainerRef] = React.useState(null);

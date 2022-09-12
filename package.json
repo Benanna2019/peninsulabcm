@@ -21,6 +21,7 @@
     "@trpc/react": "^9.27.2",
     "@trpc/server": "^9.27.2",
     "@types/lodash": "^4.14.184",
+    "clsx": "^1.2.1",
     "date-fns": "^2.29.2",
     "deepmerge": "^4.2.2",
     "dotenv": "^16.0.2",

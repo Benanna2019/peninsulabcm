@@ -1,17 +1,16 @@
 import { NextPage } from "next";
 import Calendar from "../components/Calendar";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+import AboutLayout from "../components/Layouts/AboutLayout";
 import { trpc } from "../utils/trpc";
 
 const CalendarRoute: NextPage = () => {
-  const calendarEvents = trpc.useQuery(["events.allEvents"]);
+  const calendarEvents = trpc.useQuery(["events.allCalendarEvents"]);
 
   return (
     <>
-      <Header />
-      <Calendar calendarEvents={calendarEvents} />
-      <Footer />
+      <AboutLayout>
+        <Calendar calendarEvents={calendarEvents} />
+      </AboutLayout>
     </>
   );
 };

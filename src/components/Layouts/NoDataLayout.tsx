@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Detail } from "../ListDetail/Detail";
-import { Compass } from "react-feather";
 
 export function NoDataLayout({ no_data_heading, no_data_info, children }: any) {
   const scrollContainerRef = React.useRef(null);

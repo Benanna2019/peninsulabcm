@@ -6,11 +6,9 @@ import { MarkdownRenderer } from "../../MarkdownRenderer";
 import { PostSEO } from "./PostSEO";
 
 export function PostDetail({ postInfo }: any) {
-  console.log("incoming post info: ", postInfo);
   const scrollContainerRef = React.useRef(null);
   const titleRef = React.useRef(null);
   const { data, isError, isLoading } = postInfo;
-  console.log("single post info: ", data);
 
   if (isLoading) {
     return <Detail.Loading />;

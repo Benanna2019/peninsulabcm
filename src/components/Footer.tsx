@@ -8,12 +8,14 @@ const footerNavigation = {
     { name: "Founder & President", href: "/founder" },
     { name: "PBCM Board", href: "/board" },
     { name: "Mission & Vision", href: "/mission" },
+    { name: "Calendar", href: "/calendar" },
   ],
   equipping: [
     { name: "Equipping", href: "/equipping" },
     { name: "PBCM 2022 Vision", href: "/pbcm-2022-vision" },
     { name: "Cancer Care Ministry", href: "/cancer-care" },
     { name: "Titus 2 - Womens Ministry", href: "/titus-2" },
+    { name: "Blog", href: "/blog" },
   ],
   social: [
     {
@@ -42,14 +44,23 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="grid grid-cols-2 gap-8 xl:col-span-2">
             <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
+              <div className="flex flex-col">
                 <h3 className="font-semibold text-gray-400 tracking-wider uppercase">
-                  <Link
-                    href="/biblical-counseling"
-                    className="text-base text-gray-500 hover:text-gray-900"
-                  >
-                    <a>Counseling</a>
+                  <Link href="/biblical-counseling">
+                    <a className="text-base text-gray-900 hover:text-blue-500">
+                      Counseling
+                    </a>
                   </Link>
+                </h3>
+                <h3 className="font-semibold pt-4 text-gray-400 tracking-wider uppercase">
+                  <a
+                    href="https://forms.gle/gKBugphandQFcEUV9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-gray-900 hover:text-blue-500"
+                  >
+                    Speaker Request
+                  </a>
                 </h3>
               </div>
               <div className="mt-12 md:mt-0">
@@ -59,11 +70,10 @@ export default function Footer() {
                 <ul role="list" className="mt-4 space-y-4">
                   {footerNavigation.about.map((item) => (
                     <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        className="text-base text-gray-500 hover:text-gray-900"
-                      >
-                        <a>{item.name}</a>
+                      <Link href={item.href}>
+                        <a className="text-base text-gray-900 hover:text-blue-500">
+                          {item.name}
+                        </a>
                       </Link>
                     </li>
                   ))}
@@ -78,11 +88,10 @@ export default function Footer() {
                 <ul role="list" className="mt-4 space-y-4">
                   {footerNavigation.equipping.map((item) => (
                     <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        className="text-base text-gray-500 hover:text-gray-900"
-                      >
-                        <a>{item.name}</a>
+                      <Link href={item.href}>
+                        <a className="text-base text-gray-900 hover:text-blue-500">
+                          {item.name}
+                        </a>
                       </Link>
                     </li>
                   ))}
@@ -92,34 +101,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="mt-12 xl:mt-0">
-            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-              Subscribe to our newsletter
-            </h3>
-            <p className="mt-4 text-base text-gray-500">
-              The latest news, articles, and resources, sent to your inbox.
-            </p>
-            <form className="mt-4 sm:flex sm:max-w-md">
-              <label htmlFor="email-address" className="sr-only">
-                Email address
-              </label>
-              <input
-                type="email"
-                name="email"
-                id="email-address"
-                autoComplete="email"
-                required
-                className="appearance-none min-w-0 w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:placeholder-gray-400"
-                placeholder="Enter your email"
-              />
-              <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                <button
-                  type="submit"
-                  className="w-full flex items-center justify-center bg-gradient-to-r from-tyrianPurple-300 to-tyrianPurple-600 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-emerald-600 hover:to-emerald-800"
-                >
-                  Subscribe
-                </button>
-              </div>
-            </form>
+            {/* This is where a form would go for subscribing if we want to add it */}
           </div>
         </div>
         <div className="mt-12 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between lg:mt-16">
@@ -166,8 +148,8 @@ export default function Footer() {
                 <em>
                   We are not a licensed counseling agency, nor are we
                   psychologically or medically trained therapists. We offer
-                  'pastoral/biblical' counseling intended to bring life change
-                  through heart change.
+                  &quot;pastoral/biblical&quot; counseling intended to bring
+                  life change through heart change.
                 </em>
               </p>
             </div>

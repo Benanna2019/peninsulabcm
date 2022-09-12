@@ -18,9 +18,9 @@ import {
   GlobeIcon,
   GlobeAltIcon,
   HeartIcon,
-  SupportIcon,
   XIcon,
   NewspaperIcon,
+  SpeakerphoneIcon,
 } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 
@@ -52,9 +52,15 @@ const about = [
   },
   {
     name: "Calendar",
-    description: "View Upcoming Events",
+    description: "View PBCM Calendar",
     href: "/calendar",
     icon: CalendarIcon,
+  },
+  {
+    name: "Events",
+    description: "View upcoming and past events",
+    href: "/events",
+    icon: SpeakerphoneIcon,
   },
 ];
 
@@ -198,11 +204,11 @@ export default function Header() {
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {about.map((item) => (
                             <Popover.Button
-                              key={item.name}
+                              key={item.name + "popover"}
                               className="inline-flex"
                             >
                               <Link key={item.name} href={item.href}>
-                                <a className="-m-3 p-3 flex text-left items-start rounded-lg hover:bg-gray-50">
+                                <a className="-m-3 p-3 w-full flex text-left items-start rounded-lg hover:bg-gray-50">
                                   <item.icon
                                     className="flex-shrink-0 h-6 w-6 text-tyrianPurple-300"
                                     aria-hidden="true"
@@ -265,7 +271,7 @@ export default function Header() {
                               className="inline-flex"
                             >
                               <Link key={item.name} href={item.href}>
-                                <a className="-m-3 p-3 flex text-left items-start rounded-lg hover:bg-gray-50">
+                                <a className="-m-3 p-3 w-full flex text-left items-start rounded-lg hover:bg-gray-50">
                                   <item.icon
                                     className="flex-shrink-0 h-6 w-6 text-tyrianPurple-300"
                                     aria-hidden="true"
@@ -342,7 +348,7 @@ export default function Header() {
                   {about.map((item) => (
                     <Popover.Button key={item.name + "popover"}>
                       <Link key={item.name + "popoverlink"} href={item.href}>
-                        <a className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                        <a className="-m-3 p-3 w-full flex items-center rounded-lg hover:bg-gray-50">
                           <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-tyrianPurple-300 to-tyrianPurple-600 text-white">
                             <item.icon className="h-6 w-6" aria-hidden="true" />
                           </div>
@@ -385,7 +391,7 @@ export default function Header() {
                     className="inline-flex"
                   >
                     <Link key={item.name + "popoverlink"} href={item.href}>
-                      <a className="text-left font-medium text-gray-900 hover:text-gray-700">
+                      <a className="text-left font-medium w-full text-gray-900 hover:text-gray-700">
                         {item.name}
                       </a>
                     </Link>

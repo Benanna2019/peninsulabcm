@@ -5,69 +5,29 @@ import CovidPic from "/public/covid-pic.jpeg";
 import Award from "/public/ACBC_Certificate.jpg";
 // import Banner from "../Banner";
 import Image from "next/future/image";
+import FeaturedArticle from "../BlogRenderers/FeaturedArticle";
+import FeaturedEvent from "../Events/FeaturedEvent";
 
-// const metrics = [
-//   {
-//     id: 1,
-//     stat: "8K+",
-//     emphasis: "Companies",
-//     rest: "use laoreet amet lacus nibh integer quis.",
-//   },
-//   {
-//     id: 2,
-//     stat: "25K+",
-//     emphasis: "Countries around the globe",
-//     rest: "lacus nibh integer quis.",
-//   },
-//   {
-//     id: 3,
-//     stat: "98%",
-//     emphasis: "Customer satisfaction",
-//     rest: "laoreet amet lacus nibh integer quis.",
-//   },
-//   {
-//     id: 4,
-//     stat: "12M+",
-//     emphasis: "Issues resolved",
-//     rest: "lacus nibh integer quis.",
-//   },
-// ];
+export default function LandingPage({ featuredPost, featuredEvent }: any) {
+  console.log("featured post: ", featuredPost);
+  console.log("featured event:", featuredEvent);
+  const {
+    data: postData,
+    isError: postError,
+    isLoading: postLoading,
+  } = featuredPost;
+  const {
+    data: eventData,
+    isError: eventError,
+    isLoading: eventLoading,
+  } = featuredEvent;
+  const post = postData?.featuredArticle[0];
+  const event = eventData?.featuredEvent[0];
 
-// function classNames(...classes: any) {
-//   return classes.filter(Boolean).join(" ");
-// }
-
-export default function LandingPage() {
   return (
     <div className="bg-white">
       {/* <Banner /> */}
       <main>
-        {/* Logo Cloud */}
-        {/*
-        <div className="bg-gray-100">
-          <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-            <p className="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide"></p>
-            <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-3">
-              <div className="col-span-1 flex justify-center md:col-span-1 lg:col-span-1 "></div>
-              <div className="col-span-1 flex justify-center md:col-span-1 lg:col-span-1 ">
-                <a
-                  href="https://biblicalcounseling.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    className="h-40 "
-                    src={ACBC_Certified}
-                    alt="Association of Certified Biblical Counselors"
-                  />
-                </a>
-              </div>
-
-              <div className="col-span-1 flex justify-center md:col-span-1 lg:col-span-1 "></div>
-            </div>
-          </div>
-        </div> */}
-
         {/* Hero section */}
         <div className="relative">
           <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" />
@@ -213,7 +173,11 @@ export default function LandingPage() {
             </div>
           </div>
 
+          {/* Featured Blog Article Section */}
+          {post ? <FeaturedArticle post={post} /> : null}
+
           {/* Event Section */}
+          {event ? <FeaturedEvent featuredEvent={event} /> : null}
 
           {/* <div
             id="celebration-event"
@@ -285,11 +249,10 @@ export default function LandingPage() {
                       protection, strength, and peace during unknown times.
                     </p>
                     <div className="mt-6">
-                      <Link
-                        href="/covid"
-                        className="inline-flex bg-gradient-to-r from-tyrianPurple-300 to-tyrianPurple-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-emerald-600 hover:to-emerald-800"
-                      >
-                        <a>Read More</a>
+                      <Link href="/covid">
+                        <a className="inline-flex bg-gradient-to-r from-tyrianPurple-300 to-tyrianPurple-600 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-emerald-600 hover:to-emerald-800">
+                          Read More
+                        </a>
                       </Link>
                     </div>
                   </div>
@@ -322,17 +285,15 @@ export default function LandingPage() {
               </span>
             </h2>
             <div className="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
-              <Link
-                href="/about"
-                className="flex items-center justify-center bg-gradient-to-r from-tyrianPurple-300 to-tyrianPurple-600 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-emerald-600 hover:to-emerald-800"
-              >
-                <a>Learn more</a>
+              <Link href="/about">
+                <a className="flex items-center justify-center bg-gradient-to-r from-tyrianPurple-300 to-tyrianPurple-600 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-emerald-600 hover:to-emerald-800">
+                  Learn more
+                </a>
               </Link>
-              <Link
-                href="/biblical-counseling"
-                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-800 bg-indigo-50 hover:bg-indigo-100"
-              >
-                <a>Get started</a>
+              <Link href="/biblical-counseling">
+                <a className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-800 bg-indigo-50 hover:bg-indigo-100">
+                  Get started
+                </a>
               </Link>
             </div>
           </div>

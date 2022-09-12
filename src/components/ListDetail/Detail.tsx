@@ -23,7 +23,7 @@ const Container = React.forwardRef<HTMLDivElement, DetailContainerProps>(
       <div
         ref={ref}
         id="main"
-        className="relative flex max-h-screen w-full flex-col overflow-y-auto bg-white"
+        className="relative flex min-h-screen w-full flex-col overflow-y-auto bg-white"
         {...props}
       />
     );

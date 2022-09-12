@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/future/image";
 
 interface BoardMember {
   data: Array<PBCMBoardInfo>;
@@ -38,7 +38,7 @@ export default function BoardMembers({ data, coordinators }: BoardMember) {
                   {person.photo && person.category === "board_member" ? (
                     <>
                       <Image
-                        className="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
+                        className="mx-auto h-60 w-48 rounded-md xl:w-60 xl:h-72"
                         src={person.photo ? person.photo : ""}
                         alt={person.altText}
                       />
@@ -73,7 +73,7 @@ export default function BoardMembers({ data, coordinators }: BoardMember) {
                 <div className="space-y-6">
                   <>
                     <Image
-                      className="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
+                      className="mx-auto h-60 w-48 rounded-xl xl:w-60 xl:h-72"
                       src={person.photo ? person.photo : ""}
                       alt={person.altText}
                     />

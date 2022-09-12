@@ -1,13 +1,19 @@
 import Link from "next/link";
+import Image from "next/future/image";
 import React from "react";
 import { Compass } from "react-feather";
+import { PostType } from "../clients/parsers/post";
 import { timestampToCleanTime } from "../utils/transformers";
-import { GhostButton, PrimaryButton } from "./Button";
+import { GhostButton } from "./Button";
 import { NoDataLayout } from "./Layouts/NoDataLayout";
 import { LoadingSpinner } from "./LoadingSpinner";
+import Cross from "/public/Cross.png";
+import { CategoryType } from "../clients/parsers/categories";
 
 export default function BlogIndexPage({ posts }: any) {
   const { data, isLoading } = posts;
+
+  console.log("all posts to check for categories: ", data?.allPosts);
 
   if (isLoading) {
     return (
@@ -52,7 +58,7 @@ export default function BlogIndexPage({ posts }: any) {
           </p>
         </div>
         <div className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
-          {allPosts?.map((post: any) => (
+          {allPosts?.map((post: PostType) => (
             <div
               key={post.title}
               className="flex flex-col overflow-hidden rounded-lg shadow-lg"
@@ -61,17 +67,19 @@ export default function BlogIndexPage({ posts }: any) {
                 <img
                   className="h-48 w-full object-cover"
                   src={post.coverImage}
-                  alt=""
+                  alt={post.title}
                 />
               </div>
               <div className="flex flex-1 flex-col justify-between bg-white p-6">
                 <div className="flex-1">
                   <p className="text-sm font-medium text-indigo-600">
-                    {post.category ? (
-                      <a href={post.category.href} className="hover:underline">
-                        {post.category.name}
-                      </a>
-                    ) : null}
+                    {post?.categories
+                      ? post.categories.map(
+                          (category: Partial<CategoryType>) => (
+                            <span key={category._id}>{category.title}</span>
+                          )
+                        )
+                      : null}
                   </p>
                   <Link href={`/blog/${encodeURIComponent(post.slug)}`}>
                     <a className="mt-2 block">
@@ -89,9 +97,13 @@ export default function BlogIndexPage({ posts }: any) {
                     <Link href={`/board/${post.author}`}>
                       <a>
                         <span className="sr-only">{post.author.name}</span>
-                        <img
+                        <Image
                           className="h-10 w-10 rounded-full"
-                          src={post.author.picture}
+                          src={
+                            post?.author?.picture
+                              ? post?.author?.picture
+                              : Cross
+                          }
                           alt=""
                         />
                       </a>
@@ -106,7 +118,7 @@ export default function BlogIndexPage({ posts }: any) {
                     <div className="flex space-x-1 text-sm text-gray-500">
                       <time
                         dateTime={
-                          timestampToCleanTime({ timestamp: post.datetime })
+                          timestampToCleanTime({ timestamp: post.date })
                             .formatted
                         }
                       >
@@ -116,7 +128,7 @@ export default function BlogIndexPage({ posts }: any) {
                         }
                       </time>
                       <span aria-hidden="true">&middot;</span>
-                      <span>{post.readingTime}min read</span>
+                      <span>{post.readingTime} read</span>
                     </div>
                   </div>
                 </div>

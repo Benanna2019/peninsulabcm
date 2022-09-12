@@ -1,16 +1,11 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment, useState } from "react";
 import {
-  ChevronDownIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
-  ClockIcon,
-  DotsHorizontalIcon,
   DotsVerticalIcon,
-  //@ts-ignore
 } from "@heroicons/react/solid";
 import { Menu, Transition } from "@headlessui/react";
-import { timestampToCleanTime } from "../utils/transformers";
 import {
   add,
   eachDayOfInterval,
@@ -22,7 +17,6 @@ import {
   isSameMonth,
   isToday,
   parse,
-  parseISO,
   startOfToday,
   parseJSON,
 } from "date-fns";
@@ -52,12 +46,12 @@ export default function Calendar({ calendarEvents }: any) {
   });
 
   function previousMonth() {
-    let firstDayNextMonth = add(firstDayCurrentMonth, { months: -1 });
+    const firstDayNextMonth = add(firstDayCurrentMonth, { months: -1 });
     setCurrentMonth(format(firstDayNextMonth, "MMM-yyyy"));
   }
 
   function nextMonth() {
-    let firstDayNextMonth = add(firstDayCurrentMonth, { months: 1 });
+    const firstDayNextMonth = add(firstDayCurrentMonth, { months: 1 });
     setCurrentMonth(format(firstDayNextMonth, "MMM-yyyy"));
   }
 
@@ -98,7 +92,7 @@ export default function Calendar({ calendarEvents }: any) {
   });
 
   return (
-    <div className="pt-16 pb-16">
+    <div className="pt-16 ">
       <div className="max-w-lg px-4 mx-auto sm:px-7 md:max-w-6xl md:px-6">
         <div className="md:grid md:grid-cols-2 md:divide-x md:divide-gray-200">
           <div className="md:pr-14">

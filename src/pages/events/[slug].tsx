@@ -1,25 +1,25 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-import { PostDetail } from "../../components/BlogRenderers/Writing/PostDetail";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import { EventDetail } from "../../components/Events/EventDetail";
 import { trpc } from "../../utils/trpc";
 
-const BlogPostPage: NextPage = () => {
+const IndividualEventPage: NextPage = () => {
   const router = useRouter();
   const { slug } = router.query;
-  const postInfo = trpc.useQuery([
-    "singlePost.postBySlug",
+  const eventInfo = trpc.useQuery([
+    "events.eventBySlug",
     { slug: slug as string },
   ]);
 
   return (
     <>
       <Header />
-      <PostDetail postInfo={postInfo} />
+      <EventDetail eventInfo={eventInfo} />
       <Footer />
     </>
   );
 };
 
-export default BlogPostPage;
+export default IndividualEventPage;
