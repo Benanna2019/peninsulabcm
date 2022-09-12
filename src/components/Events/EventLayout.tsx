@@ -5,7 +5,6 @@ import { NoDataLayout } from "../Layouts/NoDataLayout";
 import { Compass } from "react-feather";
 import { GhostButton } from "../Button";
 import { EventType } from "../../clients/parsers/event";
-import { MarkdownRenderer } from "../MarkdownRenderer";
 import { format, parseJSON } from "date-fns";
 import { isEqual } from "lodash/fp";
 
@@ -69,6 +68,7 @@ export function EventLayout({ events, featuredEvent }: any) {
             </div>
             {allEvents.map((event: EventType) => (
               <Event
+                key={event._id}
                 event={event}
                 mainEventTitle={mainEvent.title}
                 mainEventSlug={mainEvent.slug}

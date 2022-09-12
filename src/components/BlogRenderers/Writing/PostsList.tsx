@@ -10,7 +10,7 @@ import { PostListItem } from "./PostListItem";
 // });
 
 export function PostsList({ posts }: any) {
-  let [scrollContainerRef, setScrollContainerRef] = React.useState(null);
+  const [scrollContainerRef, setScrollContainerRef] = React.useState(null);
   const router = useRouter();
   const { slug } = router.query;
 
