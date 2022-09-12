@@ -11,9 +11,7 @@ import Cross from "/public/Cross.png";
 import { CategoryType } from "../clients/parsers/categories";
 
 export default function BlogIndexPage({ posts }: any) {
-  const { data, isLoading } = posts;
-
-  console.log("all posts to check for categories: ", data?.allPosts);
+  const { data, isLoading, isError } = posts;
 
   if (isLoading) {
     return (
@@ -23,7 +21,7 @@ export default function BlogIndexPage({ posts }: any) {
     );
   }
 
-  if (!data.allPosts || data.allPosts.length === 0) {
+  if (!data.allPosts || data.allPosts.length === 0 || isError) {
     return (
       <NoDataLayout
         no_data_heading={"Blog Posts Coming Soon"}
