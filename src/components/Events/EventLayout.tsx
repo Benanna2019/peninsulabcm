@@ -14,8 +14,11 @@ export function EventLayout({ events, featuredEvent }: any) {
     isLoading: loadingAllEvents,
     isError: eventError,
   } = events;
-  const { data: featuredEventData, isLoading: loadingFeaturedEvent } =
-    featuredEvent;
+  const {
+    data: featuredEventData,
+    isLoading: loadingFeaturedEvent,
+    isError: featureEventError,
+  } = featuredEvent;
 
   if (loadingAllEvents) {
     return (
@@ -48,7 +51,9 @@ export function EventLayout({ events, featuredEvent }: any) {
   }
 
   const { allEvents } = allEventsData;
-  const mainEvent = featuredEventData?.featuredEvent[0];
+  const mainEvent = featuredEventData?.featuredEvent[0]
+    ? featuredEventData?.featuredEvent[0]
+    : null;
   return (
     <div className="bg-white">
       <main>
@@ -78,8 +83,8 @@ export function EventLayout({ events, featuredEvent }: any) {
               <Event
                 key={event._id}
                 event={event}
-                mainEventTitle={mainEvent.title}
-                mainEventSlug={mainEvent.slug}
+                mainEventTitle={mainEvent?.title}
+                mainEventSlug={mainEvent?.slug}
               />
             ))}
           </div>
@@ -91,7 +96,7 @@ export function EventLayout({ events, featuredEvent }: any) {
 
 interface EventInterface {
   event: EventType;
-  mainEventTitle: string;
+  mainEventTitle?: string;
   mainEventSlug: string;
 }
 
