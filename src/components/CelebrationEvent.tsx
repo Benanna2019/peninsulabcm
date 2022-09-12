@@ -3,10 +3,6 @@ import EdWelch from "/public/Ed_Welch_CCEF_Image.png";
 import GiftGiveaway from "/public/Pastor_As_Counselor_Book.jpeg";
 import Image from "next/future/image";
 
-function classNames(...classes: any) {
-  return classes.filter(Boolean).join(" ");
-}
-
 export default function CelebrationEvent() {
   return (
     <div>

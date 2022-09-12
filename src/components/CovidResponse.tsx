@@ -1,5 +1,5 @@
 import Image from "next/future/image";
-import Mountains from "../assets/mountains.jpeg";
+import Mountains from "/public/mountains.jpeg";
 
 export default function CovidResponse() {
   return (

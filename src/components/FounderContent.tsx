@@ -16,7 +16,7 @@
   ```
 */
 import Image from "next/future/image";
-import image from "/public/jdwilson21.jpg";
+import founderImage from "/public/jdwilson21.jpg";
 
 export default function FounderContent() {
   return (
@@ -37,7 +37,7 @@ export default function FounderContent() {
                 <div className="aspect-w-10 aspect-h-5 lg:aspect-none">
                   <Image
                     className="rounded-lg shadow-lg object-cover object-center"
-                    src={image}
+                    src={founderImage}
                     alt="Dr. Janie D. Wilson"
                     width={1184}
                     height={1376}
