@@ -9,19 +9,6 @@ import FeaturedArticle from "../BlogRenderers/FeaturedArticle";
 import FeaturedEvent from "../Events/FeaturedEvent";
 
 export default function LandingPage({ featuredPost, featuredEvent }: any) {
-  const {
-    data: postData,
-    isError: postError,
-    isLoading: postLoading,
-  } = featuredPost;
-  const {
-    data: eventData,
-    isError: eventError,
-    isLoading: eventLoading,
-  } = featuredEvent;
-  const post = postData?.featuredArticle[0];
-  const event = eventData?.featuredEvent[0];
-
   return (
     <div className="bg-white">
       {/* <Banner /> */}
@@ -172,10 +159,10 @@ export default function LandingPage({ featuredPost, featuredEvent }: any) {
           </div>
 
           {/* Featured Blog Article Section */}
-          {post ? <FeaturedArticle post={post} /> : null}
+          {<FeaturedArticle featuredPost={featuredPost} />}
 
           {/* Event Section */}
-          {event ? <FeaturedEvent featuredEvent={event} /> : null}
+          {<FeaturedEvent featuredEvent={featuredEvent} />}
 
           {/* <div
             id="celebration-event"
