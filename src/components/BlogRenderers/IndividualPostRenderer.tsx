@@ -8,7 +8,6 @@ import { PrimaryButton } from "../Button";
 
 export default function IndividualPostRenderer({ postInfo }: any) {
   const { data, isError, isLoading } = postInfo;
-  console.log("single post info: ", data);
 
   if (isLoading) {
     return <LoadingSpinner />;

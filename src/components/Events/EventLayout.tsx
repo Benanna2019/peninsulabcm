@@ -9,7 +9,11 @@ import { format, parseJSON } from "date-fns";
 import { isEqual } from "lodash/fp";
 
 export function EventLayout({ events, featuredEvent }: any) {
-  const { data: allEventsData, isLoading: loadingAllEvents } = events;
+  const {
+    data: allEventsData,
+    isLoading: loadingAllEvents,
+    isError: eventError,
+  } = events;
   const { data: featuredEventData, isLoading: loadingFeaturedEvent } =
     featuredEvent;
 
@@ -21,7 +25,11 @@ export function EventLayout({ events, featuredEvent }: any) {
     );
   }
 
-  if (!allEventsData.allEvents || allEventsData.allEvents.length === 0) {
+  if (
+    !allEventsData?.allEvents ||
+    allEventsData?.allEvents?.length === 0 ||
+    eventError
+  ) {
     return (
       <NoDataLayout
         no_data_heading={"Events Coming Soon"}
@@ -66,7 +74,7 @@ export function EventLayout({ events, featuredEvent }: any) {
                 </h1>
               </div>
             </div>
-            {allEvents.map((event: EventType) => (
+            {allEvents?.map((event: EventType) => (
               <Event
                 key={event._id}
                 event={event}
@@ -90,14 +98,14 @@ interface EventInterface {
 const Event = ({ event, mainEventTitle, mainEventSlug }: EventInterface) => {
   const eventStartTime = parseJSON(event?.startDate);
   const eventEndTime = parseJSON(event?.endDate);
-  const featuredTitle = isEqual(event.title, mainEventTitle)
+  const featuredTitle = isEqual(event?.title, mainEventTitle)
     ? "Featured Event"
     : null;
   return (
     <div className="bg-white px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28">
       <div className="relative mx-auto max-w-lg divide-y-2 divide-gray-200 lg:max-w-7xl">
         <div className="mt-6 grid gap-16 pt-10 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-12">
-          <div key={event.title}>
+          <div key={event?.title}>
             {featuredTitle ? (
               <p className="text-sm font-medium text-green-700 pb-5">
                 <Link href={`/events/${encodeURIComponent(mainEventSlug)}`}>
@@ -106,20 +114,22 @@ const Event = ({ event, mainEventTitle, mainEventSlug }: EventInterface) => {
               </p>
             ) : null}
             <p className="text-sm text-gray-500">
-              <time dateTime={event.startDate}>
+              <time dateTime={event?.startDate}>
                 {format(eventStartTime, "E, MMM dd")} -{" "}
                 {format(eventEndTime, "E, MMM dd")}
               </time>
             </p>
             <a href="#" className="mt-2 block">
               <p className="text-xl font-semibold text-gray-900">
-                {event.title}
+                {event?.title}
               </p>
-              <p className="mt-3 text-base text-gray-500">{event.eventBlurb}</p>
+              <p className="mt-3 text-base text-gray-500">
+                {event?.eventBlurb}
+              </p>
             </a>
             <div className="mt-3">
               <Link
-                href={`/events/${encodeURIComponent(event.slug)}`}
+                href={`/events/${encodeURIComponent(event?.slug)}`}
                 className="flex"
               >
                 <a className="text-base font-semibold text-blue-600 hover:text-indigo-500 hover:underline">

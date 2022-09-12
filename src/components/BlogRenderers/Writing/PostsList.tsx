@@ -15,7 +15,6 @@ export function PostsList({ posts }: any) {
   const { slug } = router.query;
 
   const { data, error, isLoading } = posts;
-  console.log("posts from allPosts tRPC query: ", data?.allPosts);
 
   if (error) {
     return (
