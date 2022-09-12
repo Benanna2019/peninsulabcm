@@ -10,6 +10,8 @@ interface FeaturedArticle {
 export default function FeaturedArticle({ featuredPost }: any) {
   const { data, isError, isLoading } = featuredPost;
 
+  const post = data?.featuredArticle[0];
+
   if (isLoading) {
     return (
       <div className="flex flex-1 items-center justify-center h-96">
@@ -18,11 +20,10 @@ export default function FeaturedArticle({ featuredPost }: any) {
     );
   }
 
-  if (isError) {
+  if (!post || isError) {
     return null;
   }
 
-  const post = data?.featuredArticle[0];
   return (
     <>
       {post ? (
