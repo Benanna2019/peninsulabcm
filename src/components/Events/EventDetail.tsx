@@ -6,6 +6,7 @@ import { Compass } from "react-feather";
 import { GhostButton } from "../Button";
 import { EventType } from "../../clients/parsers/event";
 import { MarkdownRenderer } from "../MarkdownRenderer";
+import EventPlaceholderImage from "/public/EventPlaceholder.jpeg";
 
 export function EventDetail({ eventInfo }: any) {
   const { data, isLoading, isError } = eventInfo;
@@ -48,7 +49,7 @@ export function EventDetail({ eventInfo }: any) {
               <div className="absolute inset-0">
                 <img
                   className="h-full w-full object-cover"
-                  src={event[0]?.eventImage}
+                  src={event[0]?.eventImage ?? EventPlaceholderImage}
                   alt="People working on laptops"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-slate-100 to-indigo-200 mix-blend-multiply" />
