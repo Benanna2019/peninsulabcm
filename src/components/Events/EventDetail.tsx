@@ -6,7 +6,7 @@ import { Compass } from "react-feather";
 import { GhostButton } from "../Button";
 import { EventType } from "../../clients/parsers/event";
 import { MarkdownRenderer } from "../MarkdownRenderer";
-import EventPlaceholderImage from "/public/EventPlaceholder.jpeg";
+import EventPlaceholderImage from "/public/EventPlaceHolder.jpeg";
 
 export function EventDetail({ eventInfo }: any) {
   const { data, isLoading, isError } = eventInfo;
