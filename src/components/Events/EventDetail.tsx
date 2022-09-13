@@ -7,6 +7,7 @@ import { GhostButton } from "../Button";
 import { EventType } from "../../clients/parsers/event";
 import { MarkdownRenderer } from "../MarkdownRenderer";
 import EventPlaceholderImage from "/public/EventPlaceHolder.jpeg";
+import Image from "next/future/image";
 
 export function EventDetail({ eventInfo }: any) {
   const { data, isLoading, isError } = eventInfo;
@@ -47,7 +48,7 @@ export function EventDetail({ eventInfo }: any) {
           <div className="max-w-screen ">
             <div className="relative shadow-xl sm:overflow-hidden ">
               <div className="absolute inset-0">
-                <img
+                <Image
                   className="h-full w-full object-cover"
                   src={event[0]?.eventImage ?? EventPlaceholderImage}
                   alt="People working on laptops"
@@ -80,7 +81,9 @@ const Speakers = ({ speakers }: SpeakersInterface) => {
     <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
       <div className="space-y-12">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-          Meet our speakers
+          {speakers && speakers?.length > 0
+            ? "Meet our speakers"
+            : "No Conference Speakers Yet"}
         </h2>
         <ul
           role="list"
