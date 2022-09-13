@@ -101,8 +101,8 @@ interface EventInterface {
 }
 
 const Event = ({ event, mainEventTitle, mainEventSlug }: EventInterface) => {
-  const eventStartTime = parseJSON(event?.startDate);
-  const eventEndTime = parseJSON(event?.endDate);
+  const eventStartTime = parseJSON(event?.startDate as string);
+  const eventEndTime = parseJSON(event?.endDate as string);
   const featuredTitle = isEqual(event?.title, mainEventTitle)
     ? "Featured Event"
     : null;
@@ -119,7 +119,7 @@ const Event = ({ event, mainEventTitle, mainEventSlug }: EventInterface) => {
               </p>
             ) : null}
             <p className="text-sm text-gray-500">
-              <time dateTime={event?.startDate}>
+              <time dateTime={event?.startDate as string}>
                 {format(eventStartTime, "E, MMM dd")} -{" "}
                 {format(eventEndTime, "E, MMM dd")}
               </time>
@@ -134,7 +134,7 @@ const Event = ({ event, mainEventTitle, mainEventSlug }: EventInterface) => {
             </a>
             <div className="mt-3">
               <Link
-                href={`/events/${encodeURIComponent(event?.slug)}`}
+                href={`/events/${encodeURIComponent(event?.slug as string)}`}
                 className="flex"
               >
                 <a className="text-base font-semibold text-blue-600 hover:text-indigo-500 hover:underline">

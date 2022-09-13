@@ -2,12 +2,19 @@ import Link from "next/link";
 import { PostType } from "../../clients/parsers/post";
 import { GhostButton } from "../Button";
 import { LoadingSpinner } from "../LoadingSpinner";
+import { trpc } from "../../utils/trpc";
 
 interface FeaturedArticle {
   featuredPost: PostType;
 }
 
-export default function FeaturedArticle({ featuredPost }: any) {
+export default function FeaturedArticle() {
+  const featuredPost = trpc.useQuery(["posts.featuredArticle"]);
+
+  if (!featuredPost) {
+    return null;
+  }
+
   const { data, isError, isLoading } = featuredPost;
 
   const post = data?.featuredArticle[0];

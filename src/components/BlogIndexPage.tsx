@@ -9,8 +9,10 @@ import { NoDataLayout } from "./Layouts/NoDataLayout";
 import { LoadingSpinner } from "./LoadingSpinner";
 import Cross from "/public/Cross.png";
 import { CategoryType } from "../clients/parsers/categories";
+import { trpc } from "../utils/trpc";
 
-export default function BlogIndexPage({ posts }: any) {
+export default function BlogIndexPage() {
+  const posts = trpc.useQuery(["posts.allPosts"]);
   const { data, isLoading, isError } = posts;
 
   if (isLoading) {
@@ -21,7 +23,7 @@ export default function BlogIndexPage({ posts }: any) {
     );
   }
 
-  if (!data.allPosts || data.allPosts.length === 0 || isError) {
+  if (!data?.allPosts || data.allPosts.length === 0 || isError) {
     return (
       <NoDataLayout
         no_data_heading={"Blog Posts Coming Soon"}

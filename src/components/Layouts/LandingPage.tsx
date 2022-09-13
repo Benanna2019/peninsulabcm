@@ -7,8 +7,10 @@ import Award from "/public/ACBC_Certificate.jpg";
 import Image from "next/future/image";
 import FeaturedArticle from "../BlogRenderers/FeaturedArticle";
 import FeaturedEvent from "../Events/FeaturedEvent";
+import { LoadingSpinner } from "../LoadingSpinner";
 
-export default function LandingPage({ featuredPost, featuredEvent }: any) {
+export default function LandingPage({ featuredEvent }: any) {
+  console.log("featured event: ", featuredEvent);
   return (
     <div className="bg-white">
       {/* <Banner /> */}
@@ -159,10 +161,10 @@ export default function LandingPage({ featuredPost, featuredEvent }: any) {
           </div>
 
           {/* Featured Blog Article Section */}
-          {<FeaturedArticle featuredPost={featuredPost} />}
+          <FeaturedArticle />
 
           {/* Event Section */}
-          {<FeaturedEvent featuredEvent={featuredEvent} />}
+          <FeaturedEvent />
 
           {/* <div
             id="celebration-event"

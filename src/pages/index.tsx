@@ -3,12 +3,8 @@ import Head from "next/head";
 import LandingPage from "../components/Layouts/LandingPage";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { trpc } from "../utils/trpc";
 
 const Home: NextPage = () => {
-  const featuredPost = trpc.useQuery(["posts.featuredArticle"]);
-  const featuredEvent = trpc.useQuery(["events.featuredEvent"]);
-
   return (
     <>
       <Head>
@@ -17,7 +13,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <LandingPage featuredPost={featuredPost} featuredEvent={featuredEvent} />
+      <LandingPage />
       <Footer />
     </>
   );

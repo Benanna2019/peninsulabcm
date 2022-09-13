@@ -85,13 +85,15 @@ const Speakers = ({ speakers }: SpeakersInterface) => {
           role="list"
           className="space-y-12 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-12 lg:space-y-0"
         >
-          {speakers.map((speaker) => (
+          {speakers?.map((speaker) => (
             <li key={speaker?.name}>
               <div className="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8">
                 <div className="aspect-w-3 aspect-h-2 h-0 sm:aspect-w-3 sm:aspect-h-4">
                   <img
                     className="rounded-lg object-cover shadow-lg"
-                    src={speaker?.speakerImage}
+                    src={
+                      speaker?.speakerImage ? speaker.speakerImage : undefined
+                    }
                     alt=""
                   />
                 </div>
