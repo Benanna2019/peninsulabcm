@@ -39,6 +39,7 @@ export default function Footer() {
   const [state, handleSubmit] = useForm(
     `${process.env.NEXT_PUBLIC_SUBSCRIBE_FORM_ID}`
   );
+
   return (
     <footer className=" bg-gray-50" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">

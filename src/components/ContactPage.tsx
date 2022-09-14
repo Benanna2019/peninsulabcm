@@ -9,21 +9,17 @@ export default function ContactPage() {
     `${process.env.NEXT_PUBLIC_CONTACT_FORM_ID}`
   );
 
-  if (state.submitting) {
-    toast("Your form is submitting");
-  }
-
   if (state.errors.length > 0) {
-    toast("Sorry, there were errors submitting your form 😧");
+    toast.error("Sorry, there were errors submitting your form 😧");
   }
 
   if (state.succeeded) {
-    toast("Congrats 🎉 Your form has been submitted");
+    toast.success("Congrats 🎉 Your form has been submitted");
   }
 
   return (
     <div className="min-h-screen bg-white">
-      <ToastContainer />
+      <ToastContainer position="bottom-right" />
       <main className="overflow-hidden">
         {/* Header */}
         <div className="bg-warm-gray-50 ">
