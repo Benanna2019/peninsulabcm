@@ -7,10 +7,8 @@ import Award from "/public/ACBC_Certificate.jpg";
 import Image from "next/future/image";
 import FeaturedArticle from "../BlogRenderers/FeaturedArticle";
 import FeaturedEvent from "../Events/FeaturedEvent";
-import { LoadingSpinner } from "../LoadingSpinner";
 
-export default function LandingPage({ featuredEvent }: any) {
-  console.log("featured event: ", featuredEvent);
+export default function LandingPage() {
   return (
     <div className="bg-white">
       {/* <Banner /> */}

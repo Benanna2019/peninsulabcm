@@ -97,15 +97,23 @@ export default function BlogIndexPage() {
                     <Link href={`/board/${post.author}`}>
                       <a>
                         <span className="sr-only">{post.author.name}</span>
-                        <Image
-                          className="h-10 w-10 rounded-full"
-                          src={
-                            post?.author?.picture
-                              ? post?.author?.picture
-                              : Cross
-                          }
-                          alt=""
-                        />
+                        {post?.author?.picture ? (
+                          <img
+                            className="h-10 w-10 rounded-full"
+                            src={post?.author?.picture}
+                            alt=""
+                          />
+                        ) : (
+                          <Image
+                            className="h-10 w-10 rounded-full"
+                            src={
+                              post?.author?.picture
+                                ? post?.author?.picture
+                                : Cross
+                            }
+                            alt=""
+                          />
+                        )}
                       </a>
                     </Link>
                   </div>

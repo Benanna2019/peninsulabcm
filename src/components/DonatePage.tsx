@@ -6,11 +6,11 @@ export default function DonatePage() {
           <h2 className="text-5xl font-bold text-gray-900 tracking-wide uppercase">
             Donate
           </h2>
-          <p className="mt-8 max-w-4xl mx-auto text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-3xl">
+          <p className="mt-8 max-w-4xl mx-auto text-4xl font-semibold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-3xl">
             ...&quot;Because of your partnership in the Gospel from the first
             day until now&quot; ~Philippians 1:5
           </p>
-          <p className="max-w-3xl mt-6 mx-auto text-xl text-gray-500">
+          <p className="max-w-3xl mt-6 mx-auto text-left text-xl text-gray-500">
             Thank you for supporting the Peninsula Biblical Counseling
             Ministries. With your support it helps us to provide advance
             Biblical Counseling training within the community, provide resources
@@ -19,7 +19,7 @@ export default function DonatePage() {
             give hope and encourage hearts. No donation is too small or large
             and is greatly appreciated.
           </p>
-          <p className="max-w-3xl mt-6 mx-auto text-xl text-gray-500">
+          <p className="max-w-3xl mt-6 mx-auto text-left text-xl text-gray-500">
             Feel free to offer a custom amount or to give a one-time or monthly
             commitment. You will have the option to pay online with a credit
             card or offline (snailmail) with a check.

@@ -48,11 +48,19 @@ export function EventDetail({ eventInfo }: any) {
           <div className="max-w-screen ">
             <div className="relative shadow-xl sm:overflow-hidden ">
               <div className="absolute inset-0">
-                <Image
-                  className="h-full w-full object-cover"
-                  src={event[0]?.eventImage ?? EventPlaceholderImage}
-                  alt="People working on laptops"
-                />
+                {event[0]?.eventImage ? (
+                  <img
+                    className="h-full w-full object-cover"
+                    src={event[0]?.eventImage}
+                    alt={`${event[0].title}`}
+                  />
+                ) : (
+                  <Image
+                    className="h-full w-full object-cover"
+                    src={EventPlaceholderImage}
+                    alt={`${event[0].title}`}
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-r from-slate-100 to-indigo-200 mix-blend-multiply" />
               </div>
               <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">

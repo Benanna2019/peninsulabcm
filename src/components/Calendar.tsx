@@ -25,6 +25,8 @@ import { LoadingSpinner } from "./LoadingSpinner";
 import { NoDataLayout } from "./Layouts/NoDataLayout";
 import { Compass } from "react-feather";
 import { GhostButton } from "./Button";
+import Image from "next/future/image";
+import Cross from "/public/Cross.png";
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
@@ -207,11 +209,16 @@ function Meeting({ event }: any) {
 
   return (
     <li className="flex items-center px-4 py-2 space-x-4 group rounded-xl focus-within:bg-gray-100 hover:bg-gray-100">
-      <img
-        src={event?.eventImage}
-        alt=""
-        className="flex-none w-10 h-10 rounded-full"
-      />
+      {event?.eventImage ? (
+        <img
+          src={event?.eventImage}
+          alt=""
+          className="flex-none w-10 h-10 rounded-full"
+        />
+      ) : (
+        <Image className="h-10 w-10 rounded-full" src={Cross} alt="" />
+      )}
+
       <div className="flex-auto">
         <p className="text-gray-900">{event?.title}</p>
         <p className="mt-0.5">

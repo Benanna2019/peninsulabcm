@@ -9,7 +9,9 @@ interface FeaturedArticle {
 }
 
 export default function FeaturedArticle() {
-  const featuredPost = trpc.useQuery(["posts.featuredArticle"]);
+  const featuredPost = trpc.useQuery(["posts.featuredArticle"], {
+    retry: false,
+  });
 
   if (!featuredPost) {
     return null;

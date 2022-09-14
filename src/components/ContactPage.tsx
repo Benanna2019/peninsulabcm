@@ -1,15 +1,29 @@
+import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import { MailIcon, PhoneIcon } from "@heroicons/react/outline";
-
-export function meta() {
-  return {
-    title: "Contact",
-    description: "Contact PBCM",
-  };
-}
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function ContactPage() {
+  const [state, handleSubmit] = useForm(
+    `${process.env.NEXT_PUBLIC_CONTACT_FORM_ID}`
+  );
+
+  if (state.submitting) {
+    toast("Your form is submitting");
+  }
+
+  if (state.errors.length > 0) {
+    toast("Sorry, there were errors submitting your form 😧");
+  }
+
+  if (state.succeeded) {
+    toast("Congrats 🎉 Your form has been submitted");
+  }
+
   return (
     <div className="min-h-screen bg-white">
+      <ToastContainer />
       <main className="overflow-hidden">
         {/* Header */}
         <div className="bg-warm-gray-50 ">
@@ -239,8 +253,7 @@ export default function ContactPage() {
                     Send us a message
                   </h3>
                   <form
-                    // ref={form}
-                    // onSubmit={sendEmail}
+                    onSubmit={handleSubmit}
                     className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
                   >
                     <div>
@@ -257,6 +270,11 @@ export default function ContactPage() {
                           id="first_name"
                           autoComplete="given-name"
                           className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
+                        />
+                        <ValidationError
+                          prefix="First Name"
+                          field="first_name"
+                          errors={state.errors}
                         />
                       </div>
                     </div>
@@ -275,6 +293,11 @@ export default function ContactPage() {
                           autoComplete="family-name"
                           className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
                         />
+                        <ValidationError
+                          prefix="Last Name"
+                          field="last"
+                          errors={state.errors}
+                        />
                       </div>
                     </div>
                     <div>
@@ -291,6 +314,11 @@ export default function ContactPage() {
                           type="email"
                           autoComplete="email"
                           className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
+                        />
+                        <ValidationError
+                          prefix="Email"
+                          field="email"
+                          errors={state.errors}
                         />
                       </div>
                     </div>
@@ -318,6 +346,11 @@ export default function ContactPage() {
                           className="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md"
                           aria-describedby="phone-optional"
                         />
+                        <ValidationError
+                          prefix="Phone"
+                          field="phone"
+                          errors={state.errors}
+                        />
                       </div>
                     </div>
 
@@ -329,6 +362,11 @@ export default function ContactPage() {
                           name="mailing_list"
                           type="checkbox"
                           className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                        />
+                        <ValidationError
+                          prefix="Mailing List"
+                          field="mailing_list"
+                          errors={state.errors}
                         />
                       </div>
                       <div className="ml-3 text-sm">
@@ -345,6 +383,11 @@ export default function ContactPage() {
                           name="biblical_counseling"
                           type="checkbox"
                           className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                        />
+                        <ValidationError
+                          prefix="Biblical Counseling"
+                          field="biblical_counseling"
+                          errors={state.errors}
                         />
                       </div>
                       <div className="ml-3 text-sm">
@@ -365,6 +408,11 @@ export default function ContactPage() {
                           type="checkbox"
                           className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
                         />
+                        <ValidationError
+                          prefix="Become A Counselor"
+                          field="become_a_counselor"
+                          errors={state.errors}
+                        />
                       </div>
                       <div className="ml-3 text-sm">
                         <span
@@ -383,6 +431,11 @@ export default function ContactPage() {
                           name="schedule_a_speaking_engagement"
                           type="checkbox"
                           className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                        />
+                        <ValidationError
+                          prefix="Schedule A Speaking Engagement"
+                          field="schedule_a_speaking_engagement"
+                          errors={state.errors}
                         />
                       </div>
                       <div className="ml-3 text-sm">
@@ -404,6 +457,11 @@ export default function ContactPage() {
                           type="checkbox"
                           className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
                         />
+                        <ValidationError
+                          prefix="getting_involved_volunteering"
+                          field="getting_involved_volunteering"
+                          errors={state.errors}
+                        />
                       </div>
                       <div className="ml-3 text-sm">
                         <span
@@ -422,6 +480,11 @@ export default function ContactPage() {
                           name="attend_training_classes"
                           type="checkbox"
                           className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                        />
+                        <ValidationError
+                          prefix="Attend Training Classes"
+                          field="attend_training_classes"
+                          errors={state.errors}
                         />
                       </div>
                       <div className="ml-3 text-sm">
@@ -457,11 +520,17 @@ export default function ContactPage() {
                           aria-describedby="message-max"
                           defaultValue={""}
                         />
+                        <ValidationError
+                          prefix="Message"
+                          field="message"
+                          errors={state.errors}
+                        />
                       </div>
                     </div>
                     <div className="sm:col-span-2 sm:flex sm:justify-end">
                       <button
                         type="submit"
+                        disabled={state.submitting}
                         className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-warm-gray-50 bg-tyrianPurple-300 hover:bg-tyrianPurple-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 sm:w-auto"
                       >
                         Submit

@@ -5,12 +5,12 @@ const Equipping: NextPage = () => {
   return (
     <EquippingLayout>
       <div>
-        <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
           <div className="text-left">
-            <h2 className="text-5xl text-center font-bold text-indigo-600 tracking-wide uppercase">
+            <h2 className="text-5xl text-center font-bold text-slate-800 tracking-wide uppercase">
               TRAINING IN BIBLICAL COUNSELING
             </h2>
-            <p className="mt-12 text-center text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-3xl">
+            <p className="max-w-3xl mt-12 mx-auto text-left text-3xl font-semibold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-3xl">
               To equip any student looking for instruction in how to counsel and
               disciple others biblically, the Peninsula Biblical Counseling
               Ministries (PBCM) offer several methods for training. Training is
@@ -39,11 +39,11 @@ const Equipping: NextPage = () => {
                 Counselor Training Program contact (843) 822-9988.
               </li>
             </ul>
-            <p className="max-w-3xl mt-6 mx-auto text-xl text-gray-900 font-bold text-center">
+            <p className="max-w-3xl mt-6 mx-auto text-xl text-gray-900 font-bold text-left">
               2022 CLASS SCHEDULE:&quot;TO BE UPDATED SOON&quot;
             </p>
 
-            <h2 className="text-4xl mt-12 text-center font-bold text-indigo-600 tracking-wide uppercase">
+            <h2 className="text-4xl mt-12 text-center font-bold text-slate-800 tracking-wide uppercase">
               For the Future
             </h2>
             <p className="max-w-3xl mt-5 mx-auto text-xl text-gray-900">

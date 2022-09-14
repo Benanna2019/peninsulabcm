@@ -1,8 +1,14 @@
+//@ts-nocheck
 import { LoadingSpinner } from "../LoadingSpinner";
+import EventPlaceholderImage from "/public/EventPlaceHolder.jpeg";
 import { trpc } from "../../utils/trpc";
+import Image from "next/future/image";
 
 export default function FeaturedEvent() {
-  const featuredEvent = trpc.useQuery(["events.featuredEvent"]);
+  const featuredEvent = trpc.useQuery(["events.featuredEvent"], {
+    retry: false,
+    refetchOnWindowFocus: false,
+  });
 
   if (!featuredEvent) {
     return null;
@@ -11,6 +17,7 @@ export default function FeaturedEvent() {
   const { data, isLoading, isError } = featuredEvent;
 
   const event = data?.featuredEvent[0];
+  console.log("the event: ", event);
 
   if (isLoading) {
     return (
@@ -48,11 +55,19 @@ export default function FeaturedEvent() {
           </div>
         </div>
         <div className="relative h-64 w-full sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-1/2">
-          <img
-            className="absolute inset-0 h-full w-full object-cover"
-            src={event?.eventImage ?? undefined}
-            alt=""
-          />
+          {event?.image ? (
+            <img
+              className="absolute inset-0 h-full w-full object-cover"
+              src={event?.eventImage}
+              alt=""
+            />
+          ) : (
+            <Image
+              className="absolute inset-0 h-full w-full object-cover"
+              src={EventPlaceholderImage}
+              alt=""
+            />
+          )}
         </div>
       </main>
     </div>
