@@ -11,6 +11,7 @@ interface FeaturedArticle {
 export default function FeaturedArticle() {
   const featuredPost = trpc.useQuery(["posts.featuredArticle"], {
     retry: false,
+    refetchOnWindowFocus: false,
   });
 
   if (!featuredPost) {
