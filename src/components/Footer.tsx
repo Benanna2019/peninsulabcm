@@ -36,7 +36,7 @@ const footerNavigation = {
 };
 
 export default function Footer() {
-  const [state, handleSubmit] = useForm(
+  const [footerFormState, handleSubmit] = useForm(
     `${process.env.NEXT_PUBLIC_SUBSCRIBE_FORM_ID}`
   );
 
@@ -128,12 +128,12 @@ export default function Footer() {
               <ValidationError
                 prefix="Email"
                 field="email"
-                errors={state.errors}
+                errors={footerFormState.errors}
               />
               <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                 <button
                   type="submit"
-                  disabled={state.submitting}
+                  disabled={footerFormState.submitting}
                   className="w-full flex items-center justify-center bg-gradient-to-r from-tyrianPurple-300 to-tyrianPurple-600 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-emerald-600 hover:to-emerald-800"
                 >
                   Subscribe

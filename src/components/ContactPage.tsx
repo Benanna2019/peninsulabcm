@@ -5,15 +5,15 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function ContactPage() {
-  const [state, handleSubmit] = useForm(
+  const [contactFormState, handleSubmit] = useForm(
     `${process.env.NEXT_PUBLIC_CONTACT_FORM_ID}`
   );
 
-  if (state.errors.length > 0) {
+  if (contactFormState.errors.length > 0) {
     toast.error("Sorry, there were errors submitting your form 😧");
   }
 
-  if (state.succeeded) {
+  if (contactFormState.succeeded) {
     toast.success("Congrats 🎉 Your form has been submitted");
   }
 
@@ -270,7 +270,7 @@ export default function ContactPage() {
                         <ValidationError
                           prefix="First Name"
                           field="first_name"
-                          errors={state.errors}
+                          errors={contactFormState.errors}
                         />
                       </div>
                     </div>
@@ -292,7 +292,7 @@ export default function ContactPage() {
                         <ValidationError
                           prefix="Last Name"
                           field="last"
-                          errors={state.errors}
+                          errors={contactFormState.errors}
                         />
                       </div>
                     </div>
@@ -314,7 +314,7 @@ export default function ContactPage() {
                         <ValidationError
                           prefix="Email"
                           field="email"
-                          errors={state.errors}
+                          errors={contactFormState.errors}
                         />
                       </div>
                     </div>
@@ -345,7 +345,7 @@ export default function ContactPage() {
                         <ValidationError
                           prefix="Phone"
                           field="phone"
-                          errors={state.errors}
+                          errors={contactFormState.errors}
                         />
                       </div>
                     </div>
@@ -362,7 +362,7 @@ export default function ContactPage() {
                         <ValidationError
                           prefix="Mailing List"
                           field="mailing_list"
-                          errors={state.errors}
+                          errors={contactFormState.errors}
                         />
                       </div>
                       <div className="ml-3 text-sm">
@@ -383,7 +383,7 @@ export default function ContactPage() {
                         <ValidationError
                           prefix="Biblical Counseling"
                           field="biblical_counseling"
-                          errors={state.errors}
+                          errors={contactFormState.errors}
                         />
                       </div>
                       <div className="ml-3 text-sm">
@@ -407,7 +407,7 @@ export default function ContactPage() {
                         <ValidationError
                           prefix="Become A Counselor"
                           field="become_a_counselor"
-                          errors={state.errors}
+                          errors={contactFormState.errors}
                         />
                       </div>
                       <div className="ml-3 text-sm">
@@ -431,7 +431,7 @@ export default function ContactPage() {
                         <ValidationError
                           prefix="Schedule A Speaking Engagement"
                           field="schedule_a_speaking_engagement"
-                          errors={state.errors}
+                          errors={contactFormState.errors}
                         />
                       </div>
                       <div className="ml-3 text-sm">
@@ -456,7 +456,7 @@ export default function ContactPage() {
                         <ValidationError
                           prefix="getting_involved_volunteering"
                           field="getting_involved_volunteering"
-                          errors={state.errors}
+                          errors={contactFormState.errors}
                         />
                       </div>
                       <div className="ml-3 text-sm">
@@ -480,7 +480,7 @@ export default function ContactPage() {
                         <ValidationError
                           prefix="Attend Training Classes"
                           field="attend_training_classes"
-                          errors={state.errors}
+                          errors={contactFormState.errors}
                         />
                       </div>
                       <div className="ml-3 text-sm">
@@ -519,14 +519,14 @@ export default function ContactPage() {
                         <ValidationError
                           prefix="Message"
                           field="message"
-                          errors={state.errors}
+                          errors={contactFormState.errors}
                         />
                       </div>
                     </div>
                     <div className="sm:col-span-2 sm:flex sm:justify-end">
                       <button
                         type="submit"
-                        disabled={state.submitting}
+                        disabled={contactFormState.submitting}
                         className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-warm-gray-50 bg-tyrianPurple-300 hover:bg-tyrianPurple-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 sm:w-auto"
                       >
                         Submit
