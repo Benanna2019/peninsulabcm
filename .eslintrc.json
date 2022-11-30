@@ -15,6 +15,7 @@
     "react-hooks/exhaustive-deps": "off",
     "@next/next/no-img-element": "off",
     "react/display-name": "off",
-    "import/no-anonymous-default-export": "off"
+    "import/no-anonymous-default-export": "off",
+    "react/jsx-key": "off"
   }
 }
